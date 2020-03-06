@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="row">
+
+	    <div class="col-md-8 col-md-offset-2">
+
+    		<h1>Створити статью</h1>
+
+    		<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    		    <div class="form-group has-error">
+    		        <label for="slug">Адреса посилання <span class="require">*</span> <small>(якщо використовуєте іншу статтю)</small></label>
+    		        <input type="text" class="form-control" name="slug" formControlName="newurl" />
+    		        <span class="help-block">URL посилання</span>
+    		    </div>
+
+    		    <div class="form-group">
+    		        <label for="title">Заголовок <span class="require">*</span></label>
+    		        <input type="text" class="form-control" name="title" formControlName="title"/>
+    		    </div>
+
+    		    <div class="form-group">
+    		        <label for="description">Текст блога</label>
+    		        <textarea rows="5" class="form-control" name="description" formControlName="text" ></textarea>
+    		    </div>
+            <div class="form-group">
+              <label for="title">Автор <span class="require">*</span></label>
+              <input type="text" class="form-control" name="title" formControlName="author"/>
+          </div>
+    		    <div class="form-group">
+    		        <p><span class="require">*</span> - обов'язкове поле</p>
+    		    </div>
+
+    		    <div class="form-group">
+    		        <button [disabled]="form.invalid || auth.isAuthentificated()" type="submit" class="btn btn-primary">
+    		            Створити
+    		        </button>
+    		        <button  class="btn btn-default" (click)="clearForm()">
+    		            Відміна
+    		        </button>
+    		    </div>
+
+    		</form>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="section section-dark text-center">
+  <div class="container">
+      <h2 class="title">Блог</h2>
+      <div class="row">
+          <div class="col-lg-12">
+            <!--початок блога-->
+
+<div class="tabs">
+
+  <div class="tab-2">
+    <label for="tab2-1">Публікації</label>
+    <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+    <div>
+      <h4>Всі публікації</h4>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="tab-2" >
+    <label for="tab2-2">Додати щось нове</label>
+    <input id="tab2-2" name="tabs-two" type="radio">
+    <div>
+      <h4>Створення статті для блогу</h4>
+   <app-addpost></app-addpost>
+    </div>
+  </div>
+</div>
+          </div>
+          <!-- <button type="button" class="btn btn-outline-neutral btn-round">Додати до блогу</button> -->
+      </div>
+  </div>
+</div>
+
+

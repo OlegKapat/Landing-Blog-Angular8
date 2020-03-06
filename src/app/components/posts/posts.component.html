@@ -1,0 +1,8 @@
+<app-alarm></app-alarm>
+<div class="post">
+  <div *ngFor="let i of article">
+   <a [routerLink]="['/post',i.id]"><h4>{{i.title}}</h4></a>
+  </div>
+
+</div>
+
